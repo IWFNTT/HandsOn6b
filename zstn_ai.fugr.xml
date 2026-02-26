@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>ZSTN_AI</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZSTN_AITOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZSTN_AI</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>Z_INVOICE_MRM_COPILOT_STN</FUNCNAME>
+     <SHORT_TEXT>FM aus MS Copilot</SHORT_TEXT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>T_IDOC_CONT</PARAMETER>
+       <DBSTRUCT>EDIDC</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>T_EDIDD</PARAMETER>
+       <DBSTRUCT>EDIDD</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>T_IDOC_STATUS_TEXT</PARAMETER>
+       <DBSTRUCT>ZIDOCSTATTEXT</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>T_IDOC_CONT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Control record (IDoc)</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_EDIDD</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Data record (IDoc)</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_IDOC_STATUS_TEXT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>IDoc-Status inkl. Texte</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>Z_INVOICE_MRM_EXAMPLE</FUNCNAME>
+     <SHORT_TEXT>Beispiel Baustein</SHORT_TEXT>
+    </item>
+    <item>
+     <FUNCNAME>Z_INVOIC_MRM_TARGET</FUNCNAME>
+     <SHORT_TEXT>Zielbaustein</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IS_IDOC_CONTROL</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>EDIDC</TYP>
+      </RSIMP>
+     </IMPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>T_IDOC_DATA</PARAMETER>
+       <DBSTRUCT>EDIDD</DBSTRUCT>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>T_IDOC_STATUS_TEXT</PARAMETER>
+       <DBSTRUCT>ZIDOCSTATTEXT</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IS_IDOC_CONTROL</PARAMETER>
+       <KIND>P</KIND>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_IDOC_DATA</PARAMETER>
+       <KIND>P</KIND>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_IDOC_STATUS_TEXT</PARAMETER>
+       <KIND>P</KIND>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>
